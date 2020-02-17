@@ -8,7 +8,7 @@ import reactor.core.publisher.Mono;
 
 @RestController
 
-public class controller {
+public class Controller {
 
 
 
