@@ -1,0 +1,15 @@
+server:
+  port : 8084
+
+jwt.secret: 5069426a80ac8805d6ffc86d4efad9c73d93091d4392f8f517ab20214328a9c5
+
+springbootwebfluxjjwt:
+  password:
+    encoder:
+      secret: 5069426a80ac8805d6ffc86d4efad9c73d93091d4392f8f517ab20214328a9c5
+      iteration: 33
+      keylength : 256
+  jjwt:
+    secret: 5069426a80ac8805d6ffc86d4efad9c73d93091d4392f8f517ab20214328a9c5
+    expiration: 28800
+
