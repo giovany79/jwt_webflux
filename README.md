@@ -90,12 +90,12 @@ Controlador que se encarga de resolver la petición validando previamente el tok
 ## resources - application.yaml
 Propiedades requeridas por la aplicación
 
-- springbootwebfluxjjwt.password.encoder.secret: Secreto usado para cifrar la clave
-- springbootwebfluxjjwt.password.encoder.iteration: Es el número de veces que el password es cifrado durante la derivacion de la llave simetrica. 
-- springbootwebfluxjjwt.password.encoder.iteration.keylength: La longitud de la llave a ser entregada
+- **springbootwebfluxjjwt.password.encoder.secret:** Secreto usado para cifrar la clave
+- **springbootwebfluxjjwt.password.encoder.iteration:** Es el número de veces que el password es cifrado durante la derivacion de la llave simetrica. 
+- **springbootwebfluxjjwt.password.encoder.iteration.keylength:** La longitud de la llave a ser entregada
 
-- springbootwebfluxjjwt.jjwt.secret: Secreto usado para firmar el JWT
-- springbootwebfluxjjwt.jjwt.expiration: Tiempo de expiración del JWT
+- **springbootwebfluxjjwt.jjwt.secret:** Secreto usado para firmar el JWT
+- **springbootwebfluxjjwt.jjwt.expiration:** Tiempo de expiración del JWT
 
 ## Referencias
 https://medium.com/@ard333/authentication-and-authorization-using-jwt-on-spring-webflux-29b81f813e78
