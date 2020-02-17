@@ -84,7 +84,7 @@ Tiene los controladores para el servicio de autenticación como el de solicitud 
 ### AuthenticationController
 Controlador que se encarga de resolver la autenticación y devolver  el token JWT
 
-### controller
+### Controller
 Controlador que se encarga de resolver la petición validando previamente el token
 
 ## resources - application.yaml
