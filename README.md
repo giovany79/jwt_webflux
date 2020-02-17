@@ -43,6 +43,7 @@ Se crea un microservicio que expone una operación para autenticación mediante 
 # Estructura de la solución
 
 ## Paquete config
+Este paquete contiene las clases para la administración de los Json Web Token y administración de la seguridad
 
 ### AuthenticationManager
 Clase que implementa ReactiveAuthenticationManager  para validar el token.
@@ -63,11 +64,38 @@ Clase que implementa PBKDF2PasswordEncoder para personalizar el encoding del pas
 (Cross Origin Resource Sharing) Filtro para manejar los CORS.
 
 ## Paquete model
+Tiene las clases entidad que representan los request y los responses
+
+### JwtRequest
+Entidad para el request del JWT donde se envía usuario y password
+
+### JwtResponse
+Entidad para el response donde devuelve el JWT
+
+### Message
+Entidad para el mensaje de respuesta una vez el JWT es validado
+
+### User
+Entidad que representa al usuario y si estado
 
 ## Paquete controler
+Tiene los controladores para el servicio de autenticación como el de solicitud del mensaje
+
+### AuthenticationController
+Controlador que se encarga de resolver la autenticación y devolver  el token JWT
+
+### controller
+Controlador que se encarga de resolver la petición validando previamente el token
 
 ## resources - application.yaml
+Propiedades requeridas por la aplicación
 
+- springbootwebfluxjjwt.password.encoder.secret: Secreto usado para cifrar la clave
+- springbootwebfluxjjwt.password.encoder.iteration: Es el número de veces que el password es cifrado durante la derivacion de la llave simetrica. 
+- springbootwebfluxjjwt.password.encoder.iteration.keylength: La longitud de la llave a ser entregada
+
+- springbootwebfluxjjwt.jjwt.secret: Secreto usado para firmar el JWT
+- springbootwebfluxjjwt.jjwt.expiration: Tiempo de expiración del JWT
 
 ## Referencias
 https://medium.com/@ard333/authentication-and-authorization-using-jwt-on-spring-webflux-29b81f813e78
