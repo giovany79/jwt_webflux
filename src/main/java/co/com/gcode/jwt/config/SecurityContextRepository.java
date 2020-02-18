@@ -30,7 +30,9 @@ public class SecurityContextRepository implements ServerSecurityContextRepositor
 
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String authToken = authHeader.substring(7);
+            System.out.println("AUTH:" + authToken);
             Authentication auth = new UsernamePasswordAuthenticationToken(authToken, authToken);
+            System.out.println("AUTH2:" + auth);
             return this.authenticationManager.authenticate(auth).map((authentication) -> {
                 return new SecurityContextImpl(authentication);
             });

@@ -1,16 +1,19 @@
 package co.com.gcode.jwt.model;
 
+import co.com.gcode.jwt.Role;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
-//import org.springframework.context.annotation.Role;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @ToString
@@ -22,6 +25,7 @@ public class User implements UserDetails {
     private String username;
     private String password;
     private Boolean enabled;
+    private List<Role> roles;
 
     @Override
     public boolean isAccountNonExpired() {
@@ -45,8 +49,7 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        //return this.roles.stream().map(authority -> new SimpleGrantedAuthority(authority.name())).collect(Collectors.toList());
-        return null;
+        return this.roles.stream().map(authority -> new SimpleGrantedAuthority(authority.name())).collect(Collectors.toList());
     }
 
     @JsonIgnore

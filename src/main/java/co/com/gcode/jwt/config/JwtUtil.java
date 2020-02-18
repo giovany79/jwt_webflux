@@ -25,7 +25,10 @@ public class JwtUtil implements Serializable {
     private String expirationTime;
 
     public Claims getAllClaimsFromToken(String token) {
-        return Jwts.parser().setSigningKey(Base64.getEncoder().encodeToString(secret.getBytes())).parseClaimsJws(token).getBody();
+        return Jwts.parser()
+                .setSigningKey(Base64.getEncoder()
+                        .encodeToString(secret.getBytes()))
+                .parseClaimsJws(token).getBody();
     }
 
     public String getUsernameFromToken(String token) {
@@ -43,7 +46,7 @@ public class JwtUtil implements Serializable {
 
     public String generateToken(User user) {
         Map<String, Object> claims = new HashMap<>();
-        //claims.put("role", user.getRoles());
+        claims.put("role", user.getRoles());
         return doGenerateToken(claims, user.getUsername());
     }
 
