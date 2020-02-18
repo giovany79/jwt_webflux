@@ -100,5 +100,25 @@ Propiedades requeridas por la aplicación
 - **springbootwebfluxjjwt.jjwt.secret:** Secreto usado para firmar el JWT
 - **springbootwebfluxjjwt.jjwt.expiration:** Tiempo de expiración del JWT
 
+## Como probar el servicio
+
+1. Ingresar con usuario y clave invalido
+- Se aprecia que se devuelve un status code 401 Unauthorized
+![](https://github.com/giovany79/images/blob/master/jwtwrongpassword.png)
+
+
+2. Ingresar con usuario y clave correcta
+- Devuelve un status code 200
+- Devuelve en el body el token JWT
+![](https://github.com/giovany79/images/blob/master/jwtpasswordOK.png)
+
+3. Consumir el servicio sin autenticación previa (Sin Bearer token)
+- Devuelve un status code 401 Unauthorized
+![](https://github.com/giovany79/images/blob/master/jwtwithoutBearer.png)
+
+4. Consumir el servicio enviando el Bearer token
+- Se aprecia que se devuelve el recurso correctamente
+https://github.com/giovany79/images/blob/master/JwtWithBearer.png
+
 ## Referencias
 https://medium.com/@ard333/authentication-and-authorization-using-jwt-on-spring-webflux-29b81f813e78
