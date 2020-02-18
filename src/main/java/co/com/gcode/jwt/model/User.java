@@ -15,7 +15,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-
+/**
+ * Entidad usuario con sus atributos para administrar un usuario y sus accesos
+ */
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
