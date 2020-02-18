@@ -1,6 +1,9 @@
 # JWT con Webflux
 Proyecto que se encarga de generar un token de sesión JWT y validarlo luego para acceder a recursos de un API
 
+# Fundamentos de JWT
+https://github.com/giovany79/jwt_webflux/wiki/Json-Web-Token---JWT
+
 # Técnologías
 
 ## JDK 11
