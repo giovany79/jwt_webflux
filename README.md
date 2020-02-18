@@ -118,7 +118,7 @@ Propiedades requeridas por la aplicación
 
 4. Consumir el servicio enviando el Bearer token
 - Se aprecia que se devuelve el recurso correctamente
-https://github.com/giovany79/images/blob/master/JwtWithBearer.png
+![](https://github.com/giovany79/images/blob/master/JwtWithBearer.png)
 
 ## Referencias
 https://medium.com/@ard333/authentication-and-authorization-using-jwt-on-spring-webflux-29b81f813e78
